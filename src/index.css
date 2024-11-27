@@ -102,8 +102,9 @@ h2 {
   .body .container {
     width: 300px;
     height: 35px;
-    margin-left: 0px;
+    margin-left: 20px;
     align-items: none;
+
   }
 
   .body .container input {
@@ -114,6 +115,7 @@ h2 {
 
   .taskcol {
     width: 260px;
+    margin-left: 20px;
   }
 
   .box {
