@@ -47,13 +47,14 @@ function App() {
 
   return (
     <div className='body'>
-      <h1>TO DO LIST </h1>
+      <h1>TASK MANAGEMENT APPLICATION </h1>
+      <hr className='line' />
       <div className='container'>
         <input type="text" placeholder='Enter the task' value={task} onChange={getInput} />
-        <button onClick={getData}>ADD TASK</button>
+        <button className='addtask' onClick={getData}>ADD TASK</button>
       </div>
-
-      <div className=''>
+      <hr className='line' />
+      <div className='taskslist'>
         <h2>LISTS OF TASKS</h2>
         {data.map((tas, index) => (
           <div className="taskcol">
@@ -61,9 +62,10 @@ function App() {
               style={{
                 "background-color": tas.completed ? "#0daf79" : "aquamarine",
               }}>
-              {index + 1}. {tas.text} <input type="checkbox" checked={tas.completed} onChange={() => toggleTask(index)} />
+              <b> {index + 1}. {tas.text} </b> <input type="checkbox" checked={tas.completed} onChange={() => toggleTask(index)} />
+              <button onClick={() => deletetask(index)}>Delete</button>
             </div>
-            <button onClick={() => deletetask(index)}>Delete</button>
+
 
           </div>
 
